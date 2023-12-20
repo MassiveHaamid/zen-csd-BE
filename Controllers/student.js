@@ -1,4 +1,4 @@
-const Student = require("../Model/studentModel");
+const Student = require("../Models/studentModel");
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 const { EMAIL_ADDRESS, EMAIL_PASSWORD, FEURL } = require("../utils/config");
