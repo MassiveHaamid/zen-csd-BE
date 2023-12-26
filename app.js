@@ -24,7 +24,7 @@ app.use(cors());
 
 mongoose.set("strictQuery", false);
 
-mongoose.connect(MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("connected to MongoDB");
   })
@@ -45,5 +45,7 @@ app.use(capstoneRouter);
 app.use(webcodeRouter);
 app.use(queryRouter);
 app.use(mockRouter);
+
+app.listen(process.env.PORT, ()=> {console.log("server is started")});
 
 module.exports = app;
