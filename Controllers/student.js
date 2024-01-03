@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 const { EMAIL_ADDRESS, EMAIL_PASSWORD, FEURL } = require("../utils/config");
 
-/*****************sign up new student*********************/
+//sign up new student
 
 const signupStudent = async (req, res) => {
   //preparing object to store in collection
@@ -64,7 +64,7 @@ const signupStudent = async (req, res) => {
 
     const sendMail = async () => {
       const info = await transporter.sendMail({
-        from: `"Udhayasooriyan" <${EMAIL_ADDRESS}>`,
+        from: `"Haamid" <${EMAIL_ADDRESS}>`,
         to: student.email,
         subject: "Confirm account",
         text: link,
@@ -84,7 +84,7 @@ const signupStudent = async (req, res) => {
   }
 };
 
-/***************updating student profile*************/
+// updating student profile
 
 const updateStudent = async (req, res) => {
   try {
@@ -133,7 +133,7 @@ const updateStudent = async (req, res) => {
   }
 };
 
-/**********confirming/authenticate student account*************/
+// confirming/authenticate student account
 
 const confirmStudent = async (req, res) => {
   try {
@@ -165,7 +165,7 @@ const confirmStudent = async (req, res) => {
   }
 };
 
-/***************Creating link for reseting password*************/
+// Creating link for reseting password
 
 const forgotPassword = async (req, res) => {
   try {
@@ -204,7 +204,7 @@ const forgotPassword = async (req, res) => {
 
     const sendMail = async () => {
       const info = await transporter.sendMail({
-        from: `"Udhayasooriyan" <${EMAIL_ADDRESS}>`,
+        from: `"Haamid" <${EMAIL_ADDRESS}>`,
         to: matchedStudent.email,
         subject: "Reset Password",
         text: link,
@@ -227,7 +227,7 @@ const forgotPassword = async (req, res) => {
   }
 };
 
-/*******************reseting password**************************/
+// reseting password
 
 const resetPassword = async (req, res) => {
   try {

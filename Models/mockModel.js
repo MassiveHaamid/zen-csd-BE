@@ -27,7 +27,7 @@ const mockSchema = new mongoose.Schema({
   },
   recordingURL: {
     type: String,
-    default: "https://www.google.com/",
+    default: "https://www.gmail.com/",
   },
   student: {
     type: mongoose.Schema.Types.ObjectId,

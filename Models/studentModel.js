@@ -12,7 +12,7 @@ const studentSchema = new mongoose.Schema({
   },
   batch: {
     type: String,
-    default: "B47-WD2 Tamil",
+    default: "B51-WD Tamil",
   },
   contactNo: {
     type: String,
@@ -51,16 +51,6 @@ const studentSchema = new mongoose.Schema({
     type: String,
     default: "0",
   },
-  isMentor: {
-    type: Boolean,
-    default: false,
-  },
-  leave: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Leave",
-    },
-  ],
   portfolio: [
     {
       type: mongoose.Schema.Types.ObjectId,
@@ -77,12 +67,6 @@ const studentSchema = new mongoose.Schema({
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Webcode",
-    },
-  ],
-  query: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Query",
     },
   ],
   mock: [

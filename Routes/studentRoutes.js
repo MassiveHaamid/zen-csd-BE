@@ -7,24 +7,19 @@ const {
   resetPassword,
 } = require("../Controllers/student.js");
 
-/*****************sign up new student*********************/
-
+// sign up new student
 studentRouter.post("/student/signup", signupStudent);
 
-/***************updating student profile*************/
-
+// updating student profile
 studentRouter.put("/student/update", updateStudent);
 
-/**********confirming/authenticate student account*************/
-
+// confirming/authenticate student account
 studentRouter.patch("/student/confirm/:id", confirmStudent);
 
-/***************Creating link for reseting password*************/
-
+// Creating link for reseting password
 studentRouter.put("/student/forgot", forgotPassword);
 
-/*******************reseting password**************************/
-
+// reseting password
 studentRouter.patch("/student/reset/:id", resetPassword);
 
 module.exports = studentRouter;

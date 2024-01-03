@@ -12,11 +12,9 @@ const { URL } = require("./utils/config");
 const loginRouter = require("./Routes/loginRoutes");
 const studentRouter = require("./Routes/studentRoutes");
 const taskRouter = require("./Routes/taskRoutes");
-const leaveRouter = require("./Routes/leaveRoutes");
 const portfolioRouter = require("./Routes/portfolioRoutes");
 const capstoneRouter = require("./Routes/capstoneRoutes");
 const webcodeRouter = require("./Routes/webcodeRoutes");
-const queryRouter = require("./Routes/queryRoutes");
 const mockRouter = require("./Routes/mockRoutes");
 
 app.use(express.json());
@@ -39,11 +37,9 @@ app.get("/", (req, res) => {
 app.use(studentRouter);
 app.use(taskRouter);
 app.use(loginRouter);
-app.use(leaveRouter);
 app.use(portfolioRouter);
 app.use(capstoneRouter);
 app.use(webcodeRouter);
-app.use(queryRouter);
 app.use(mockRouter);
 
 app.listen(process.env.PORT, ()=> {console.log("server is started")});
