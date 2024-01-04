@@ -10,7 +10,7 @@ const login = async (req, res) => {
 
     // search and find the document of the student with email
     const student = await Student.findOne({ email });
-
+console.log('student', student);
     // if student not found send error
     if (!student) {
       return res
@@ -19,11 +19,11 @@ const login = async (req, res) => {
     }
 
     // if student not verified send error
-    if (!student.verified) {
-      return res
-        .status(401)
-        .json({ message: "Account not verfied, kindly check your Email" });
-    }
+    // if (!student.verified) {
+    //   return res
+    //     .status(401)
+    //     .json({ message: "Account not verfied, kindly check your Email" });
+    // }
 
     const passwordCheck = await bcrypt.compare(password, student.password);
 

@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const URL = process.env.ATLAS_URI;
+const URL = process.env.MONGODB_URI;
 const PORT = process.env.PORT;
 const EMAIL_ADDRESS = process.env.EMAIL_ADDRESS;
 const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;

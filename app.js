@@ -8,7 +8,6 @@ const mongoose = require("mongoose");
 const { URL } = require("./utils/config");
 
 // getting all routers
-
 const loginRouter = require("./Routes/loginRoutes");
 const studentRouter = require("./Routes/studentRoutes");
 const taskRouter = require("./Routes/taskRoutes");
@@ -21,8 +20,8 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.set("strictQuery", false);
-
 mongoose.connect(process.env.MONGODB_URI)
+
   .then(() => {
     console.log("connected to MongoDB");
   })
@@ -42,6 +41,6 @@ app.use(capstoneRouter);
 app.use(webcodeRouter);
 app.use(mockRouter);
 
-app.listen(process.env.PORT, ()=> {console.log("server is started")});
+app.listen(process.env.PORT, ()=> {console.log("server is started", process.env.PORT)});
 
 module.exports = app;
