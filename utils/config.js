@@ -5,8 +5,8 @@ const PORT = process.env.PORT;
 const EMAIL_ADDRESS = process.env.EMAIL_ADDRESS;
 const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
 const SECRET = process.env.SECRET;
-const BEURL = process.env.BEURL;
 const FEURL = process.env.FEURL;
+const BEURL = process.env.BEURL;
 
 module.exports = {
   URL,
